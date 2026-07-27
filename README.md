@@ -29,12 +29,12 @@ Follow these steps to set up and run the project locally.
 
 * **React.js** - Frontend user interface framework
 * **Node.js** - Backend JavaScript runtime environment
-
-
 * **Express.js** - Web application framework for Node.js
 * **MongoDB** - NoSQL database for data storage
 
-## DEMO VIDEO
+
+## Deployed Link
+``https://globaladvanceopc.netlify.app/``
 
 
 
