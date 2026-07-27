@@ -53,6 +53,6 @@ https://job-frontend-psi.vercel.app/
 <img width="1920" height="928" alt="Updated in Admin Dashboard" src="https://github.com/user-attachments/assets/095c2bd4-a31d-483a-891b-af83a6b52207" />
 
 
-4.**User**
+3.**User**
 <img width="1920" height="931" alt="User submitting job application" src="https://github.com/user-attachments/assets/9c982500-0d6d-411e-a684-3b8afc4e288a" />
 
