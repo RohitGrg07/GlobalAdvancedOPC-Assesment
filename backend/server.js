@@ -32,7 +32,7 @@ const start = async () => {
     await seedJobs();
 
     const server = app.listen(PORT, () => {
-      console.log(`🚀 Server listening on http://localhost:${PORT}`);
+      console.log(`🚀 Server listening on :${PORT}`);
     });
 
     server.on("error", (err) => {
