@@ -34,7 +34,11 @@ Follow these steps to set up and run the project locally.
 * **Express.js** - Web application framework for Node.js
 * **MongoDB** - NoSQL database for data storage
 
-## SCREENSHOT & DEMO VIDEO:-
+## DEMO VIDEO
+
+
+
+## SCREENSHOT:-
 1. **Landing Page**
    <img width="1920" height="927" alt="landing page" src="https://github.com/user-attachments/assets/8b582e24-9e00-413a-bb42-e37d7a5a7c5f" />
 
