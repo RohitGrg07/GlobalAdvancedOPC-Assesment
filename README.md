@@ -35,7 +35,7 @@ Follow these steps to set up and run the project locally.
 
 ## Deployed Link
 ``` Link
-https://globaladvanceopc.netlify.app/
+https://job-frontend-psi.vercel.app/
 ```
 
 
