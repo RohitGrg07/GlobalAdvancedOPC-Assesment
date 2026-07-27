@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { LogOut } from 'lucide-react';
-import { useAuth } from '@/context/AuthContext';
-import { BrandLogo } from '@/components/BrandLogo';
+import { ReactNode } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { LogOut } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
+import { BrandLogo } from "@/components/BrandLogo";
 
 type AdminLayoutProps = {
   children: ReactNode;
@@ -14,10 +14,10 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 
   const handleLogout = () => {
     logout();
-    navigate('/');
+    navigate("/");
   };
 
-  const initial = (user?.username?.[0] || 'A').toUpperCase();
+  const initial = (user?.username?.[0] || "A").toUpperCase();
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
@@ -28,13 +28,15 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           </Link>
 
           <div className="flex items-center gap-4">
-            <span className="text-sm text-slate-500 hidden sm:inline">Admin</span>
+            <span className="text-sm text-slate-500 hidden sm:inline">
+              Admin
+            </span>
             <div className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center text-sm font-semibold text-slate-700">
                 {initial}
               </div>
               <span className="text-sm font-medium text-slate-800 capitalize hidden sm:inline">
-                {user?.username || 'Admin'}
+                {user?.username || "Admin"}
               </span>
             </div>
             <button
@@ -48,15 +50,19 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         </div>
       </nav>
 
-      <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8">{children}</main>
+      <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8">
+        {children}
+      </main>
 
       <footer className="border-t border-slate-200 bg-white mt-auto">
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
           <div className="flex items-center gap-2">
             <BrandLogo size="sm" showText={false} />
-            <span>Hiredeck — connecting talent with opportunity.</span>
+            <span>
+              Global Advance OPC — connecting talent with opportunity.
+            </span>
           </div>
-          <span>© 2026 Hiredeck</span>
+          <span>© 2026 Global Advance OPC</span>
         </div>
       </footer>
     </div>

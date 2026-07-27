@@ -1,23 +1,25 @@
-import { useState, FormEvent } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
-import { useAuth } from '@/context/AuthContext';
-import { useToast } from '@/hooks/use-toast';
-import { BrandLogo } from '@/components/BrandLogo';
-import { PasswordInput } from '@/components/PasswordInput';
+import { useState, FormEvent } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
+import { useToast } from "@/hooks/use-toast";
+import { BrandLogo } from "@/components/BrandLogo";
+import { PasswordInput } from "@/components/PasswordInput";
 
 export function RegisterPage() {
   const { user, register, isLoading } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   if (!isLoading && user) {
-    return <Navigate to={user.role === 'admin' ? '/admin' : '/dashboard'} replace />;
+    return (
+      <Navigate to={user.role === "admin" ? "/admin" : "/dashboard"} replace />
+    );
   }
 
   const handleSubmit = async (e: FormEvent) => {
@@ -25,18 +27,18 @@ export function RegisterPage() {
 
     if (password !== confirmPassword) {
       toast({
-        title: 'Validation error',
-        description: 'Passwords do not match.',
-        variant: 'destructive',
+        title: "Validation error",
+        description: "Passwords do not match.",
+        variant: "destructive",
       });
       return;
     }
 
     if (password.length < 6) {
       toast({
-        title: 'Validation error',
-        description: 'Password must be at least 6 characters.',
-        variant: 'destructive',
+        title: "Validation error",
+        description: "Password must be at least 6 characters.",
+        variant: "destructive",
       });
       return;
     }
@@ -44,13 +46,17 @@ export function RegisterPage() {
     setSubmitting(true);
     try {
       await register(username, password);
-      toast({ title: 'Account created', description: 'Welcome to Hiredeck.' });
-      navigate('/dashboard');
+      toast({
+        title: "Account created",
+        description: "Welcome to Global Advance OPC Job Board.",
+      });
+      navigate("/dashboard");
     } catch (err) {
       toast({
-        title: 'Registration failed',
-        description: err instanceof Error ? err.message : 'Could not create account',
-        variant: 'destructive',
+        title: "Registration failed",
+        description:
+          err instanceof Error ? err.message : "Could not create account",
+        variant: "destructive",
       });
     } finally {
       setSubmitting(false);
@@ -69,7 +75,10 @@ export function RegisterPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80" />
         <div className="relative z-10 flex flex-col justify-between h-full p-8 lg:p-12">
-          <BrandLogo size="sm" className="[&_span]:text-white [&_span]:text-base" />
+          <BrandLogo
+            size="sm"
+            className="[&_span]:text-white [&_span]:text-base"
+          />
           <div>
             <p className="font-mono text-xs text-neutral-400 mb-4 tracking-wider">
               // USER ONBOARDING
@@ -149,7 +158,7 @@ export function RegisterPage() {
               disabled={submitting}
               className="w-full bg-black text-white font-mono text-xs uppercase tracking-widest py-4 hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
             >
-              {submitting ? 'CREATING...' : 'CREATE ACCOUNT'}
+              {submitting ? "CREATING..." : "CREATE ACCOUNT"}
               {!submitting && <ArrowRight className="w-4 h-4" />}
             </button>
           </form>

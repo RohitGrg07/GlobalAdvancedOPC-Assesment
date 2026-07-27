@@ -182,7 +182,7 @@ export function LandingPage() {
                   <KeyRound className="w-4 h-4 text-neutral-400 mt-0.5 group-hover:text-orange-500 transition-colors" />
                   <div>
                     <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-wider">
-                      // ADMIN ACCESS PORTAL
+                      Click Me!!!
                     </p>
                     <p className="text-xs text-neutral-400 mt-1">
                       Click to auto-fill admin credentials
@@ -218,7 +218,7 @@ export function LandingPage() {
                   <UserRound className="w-4 h-4 text-neutral-400 mt-0.5 group-hover:text-orange-500 transition-colors" />
                   <div>
                     <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-wider">
-                      // DEMO USER PORTAL
+                      CLICK ME!!!
                     </p>
                     <p className="text-xs text-neutral-400 mt-1">
                       Click to auto-fill demo user credentials

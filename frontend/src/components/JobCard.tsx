@@ -5,7 +5,7 @@ import {
   MapPin,
   Building2,
   Calendar,
-  DollarSign,
+  IndianRupee,
   Edit,
   Trash2,
 } from "lucide-react";
@@ -72,7 +72,7 @@ export const JobCard = ({ job, readOnly, onEdit, onDelete, onView }: JobCardProp
             <span className="font-medium">{job.location}</span>
           </div>
           <div className="flex items-center gap-2">
-            <DollarSign className="h-4 w-4 text-gray-400" />
+            <IndianRupee className="h-4 w-4 text-gray-400" />
             <span className="font-medium">{job.salary}</span>
           </div>
           <div className="flex items-center gap-2">

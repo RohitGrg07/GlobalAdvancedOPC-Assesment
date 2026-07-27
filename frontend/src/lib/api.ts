@@ -1,16 +1,21 @@
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/api';
+const API_BASE =
+  import.meta.env.VITE_API_BASE ||
+  "https://globaladvancedopc-assesment-2.onrender.com/api";
 
-export const getToken = () => localStorage.getItem('token');
+export const getToken = () => localStorage.getItem("token");
 
 export const authHeaders = (): HeadersInit => {
   const token = getToken();
   return {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
     ...(token ? { Authorization: `Bearer ${token}` } : {}),
   };
 };
 
-export async function apiFetch<T>(path: string, options: RequestInit = {}): Promise<T> {
+export async function apiFetch<T>(
+  path: string,
+  options: RequestInit = {},
+): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
     ...options,
     headers: {

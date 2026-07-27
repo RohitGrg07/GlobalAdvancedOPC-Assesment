@@ -151,7 +151,7 @@ export const JobForm = ({
                 <Label htmlFor="salary">Salary Range</Label>
                 <Input
                   id="salary"
-                  placeholder="e.g., $80k - $120k"
+                  placeholder="e.g., ₹8L - ₹12L"
                   value={formData.salary}
                   onChange={(e) => handleInputChange("salary", e.target.value)}
                 />
