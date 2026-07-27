@@ -24,7 +24,9 @@ app.use("/api/applications", applicationsRouter);
 
 const start = async () => {
   try {
-    const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/jobboard";
+    const uri =
+      process.env.MONGO_URI ||
+      "mongodb+srv://rohitgrg1997:fp2O7xDRdJCzQkgf@cluster0.bg8fn.mongodb.net/";
     await mongoose.connect(uri, {});
     console.log("✅ Connected to MongoDB");
     await seedAdmin();
@@ -32,7 +34,7 @@ const start = async () => {
     await seedJobs();
 
     const server = app.listen(PORT, () => {
-      console.log(`🚀 Server listening on :${PORT}`);
+      console.log(`🚀 Server listening on http://localhost:${PORT}`);
     });
 
     server.on("error", (err) => {
